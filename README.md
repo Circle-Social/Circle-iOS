@@ -1,2 +1,2 @@
-# circle_ios
+# Circle
 Circle iOS Application
