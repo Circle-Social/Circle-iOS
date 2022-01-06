@@ -38,6 +38,15 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         addGradient()
         
+        let homeMsg = UITextView(frame: CGRect(x: view.center.x-50, y: 10, width: 100, height: 100))
+        homeMsg.textAlignment = .center
+        homeMsg.textColor = UIColor.black
+        homeMsg.backgroundColor = UIColor(white: 1, alpha: 0.0)
+        let text = "Home"
+        homeMsg.text = text
+        homeMsg.font = UIFont(name: "PingFangHK-Thin", size: 21)
+        view.addSubview(homeMsg)
+        
         menu = SideMenuNavigationController(rootViewController: MenuListController())
         menu?.leftSide = true
         menu?.setNavigationBarHidden(true, animated: false)
@@ -64,10 +73,10 @@ class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         menuButton.frame = CGRect(
-            x: 18,
-            y: 18,
-            width: 36,
-            height: 36
+            x: headerButtonX,
+            y: headerButtonY,
+            width: headerButtonWidth,
+            height: headerButtonHeight
         )
     }
     

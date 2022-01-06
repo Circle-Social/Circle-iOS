@@ -51,6 +51,7 @@
 		AA2F4D9E2783C04D00B3A735 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA2F4D9D2783C04D00B3A735 /* Alamofire */; };
 		AA2F4DA02783C1EE00B3A735 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA2F4D9F2783C1EE00B3A735 /* GoogleService-Info.plist */; };
 		AA2F4DA42783E7EF00B3A735 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DA32783E7EF00B3A735 /* UIImageExtension.swift */; };
+		AA2F4DA72786983500B3A735 /* CircleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DA62786983500B3A735 /* CircleConstants.swift */; };
 		CB3690B3CCC9F2C5AF84BE99 /* Pods_Circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B689838362F84FBB82EE35 /* Pods_Circle.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		AA2F4D2C2782AA3F00B3A735 /* ApiUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUtils.swift; sourceTree = "<group>"; };
 		AA2F4D9F2783C1EE00B3A735 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA2F4DA32783E7EF00B3A735 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		AA2F4DA62786983500B3A735 /* CircleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleConstants.swift; sourceTree = "<group>"; };
 		C1B689838362F84FBB82EE35 /* Pods_Circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9EF2B1D674C8A4FE1B5391 /* Pods-Circle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.debug.xcconfig"; path = "Target Support Files/Pods-Circle/Pods-Circle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +169,7 @@
 				AA2F4D0D278299EE00B3A735 /* LaunchScreen.storyboard */,
 				AA2F4D10278299EE00B3A735 /* Info.plist */,
 				AA2F4DA52783E7F500B3A735 /* Extensions */,
+				AA2F4DA62786983500B3A735 /* CircleConstants.swift */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				AA2F4D272782A9AA00B3A735 /* UserClient.swift in Sources */,
 				AA2F4D2D2782AA3F00B3A735 /* ApiUtils.swift in Sources */,
 				AA2F4D182782A83400B3A735 /* AddTimeVC.swift in Sources */,
+				AA2F4DA72786983500B3A735 /* CircleConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
