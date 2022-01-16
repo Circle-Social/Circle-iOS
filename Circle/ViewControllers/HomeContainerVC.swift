@@ -27,9 +27,11 @@ class HomeContainerVC: UIViewController {
     
     private func addChildVCs() {
         // Menu
+        menuVC.delegate = self
         addChild(menuVC)
         view.addSubview(menuVC.view)
         menuVC.didMove(toParent: self)
+        view.backgroundColor = darkOrange
         
         // Home
         homeVC.delegate = self
@@ -43,9 +45,15 @@ class HomeContainerVC: UIViewController {
 
 
 extension HomeContainerVC: HomeViewControllerDelegate {
+    
     func menuPressed() {
+        toggleMenu(completion: nil)
+    }
+    
+    func toggleMenu(completion: (() -> Void)?) {
         switch menuState {
         case .closed:
+            // open menu
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut) {
                 
                 self.navVC?.view.frame.origin.x = self.homeVC.view.frame.size.width - 100
@@ -56,6 +64,7 @@ extension HomeContainerVC: HomeViewControllerDelegate {
                 }
             }
         case .opened:
+            // close menu
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut) {
                 
                 self.navVC?.view.frame.origin.x = 0 
@@ -63,7 +72,31 @@ extension HomeContainerVC: HomeViewControllerDelegate {
             } completion: { [weak self] done in
                 if done {
                     self?.menuState = .closed
+                    DispatchQueue.main.async {
+                        completion?()
+                    }
                 }
+            }
+        }
+    }
+}
+
+
+extension HomeContainerVC: MenuViewControllerDelegate {
+    
+    func didSelect(menuItem: MenuVC.MenuItems) {
+        toggleMenu {
+            switch menuItem {
+            case .home:
+                break
+            case .time:
+                break
+            case .circles:
+                break
+            case .settings:
+                break
+            case .logout:
+                self.performSegue(withIdentifier: "homeLogout", sender: self)
             }
         }
     }

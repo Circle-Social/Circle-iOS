@@ -84,37 +84,3 @@ class HomeViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
-
-class MenuListController: UITableViewController {
-    
-    let darkOrange = UIColor(red: 0.75, green: 0.41, blue: 0.0, alpha: 1)
-    var items = [
-        "Profile",
-        "Settings",
-        "Logout"
-    ]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.backgroundColor = darkOrange
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = items[indexPath.row]
-        cell.textLabel?.textColor = .white
-        cell.backgroundColor = darkOrange
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        // do something
-    }
-}

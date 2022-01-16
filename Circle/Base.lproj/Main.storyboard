@@ -111,7 +111,7 @@
             <objects>
                 <viewController storyboardIdentifier="login" id="AoD-gI-1yB" customClass="LoginViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HFn-iD-Sju">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTX-5P-z2Q">
@@ -149,7 +149,7 @@
             <objects>
                 <viewController id="U3U-Ol-MHn" customClass="HomeContainerVC" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ncy-Uh-x1g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="dJA-Bj-tvm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -157,6 +157,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gZj-9S-vvS"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="AoD-gI-1yB" kind="show" identifier="homeLogout" id="fL4-mb-orj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="947-rz-4ow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,7 +170,7 @@
             <objects>
                 <viewController id="Psy-ES-6k8" customClass="ForgotPassController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zCL-KA-VaB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Sff-MF-77X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -184,7 +187,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="KBd-yx-8B1"/>
-        <segue reference="fDy-zf-QUV"/>
+        <segue reference="fL4-mb-orj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
