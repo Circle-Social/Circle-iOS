@@ -52,6 +52,8 @@
 		AA2F4DA02783C1EE00B3A735 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA2F4D9F2783C1EE00B3A735 /* GoogleService-Info.plist */; };
 		AA2F4DA42783E7EF00B3A735 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DA32783E7EF00B3A735 /* UIImageExtension.swift */; };
 		AA2F4DA72786983500B3A735 /* CircleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DA62786983500B3A735 /* CircleConstants.swift */; };
+		AA2F4DA92793983200B3A735 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DA82793983200B3A735 /* MenuVC.swift */; };
+		AA2F4DAB2793989F00B3A735 /* HomeContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DAA2793989F00B3A735 /* HomeContainerVC.swift */; };
 		CB3690B3CCC9F2C5AF84BE99 /* Pods_Circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B689838362F84FBB82EE35 /* Pods_Circle.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		AA2F4D9F2783C1EE00B3A735 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA2F4DA32783E7EF00B3A735 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		AA2F4DA62786983500B3A735 /* CircleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleConstants.swift; sourceTree = "<group>"; };
+		AA2F4DA82793983200B3A735 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		AA2F4DAA2793989F00B3A735 /* HomeContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerVC.swift; sourceTree = "<group>"; };
 		C1B689838362F84FBB82EE35 /* Pods_Circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9EF2B1D674C8A4FE1B5391 /* Pods-Circle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.debug.xcconfig"; path = "Target Support Files/Pods-Circle/Pods-Circle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,9 +182,11 @@
 			isa = PBXGroup;
 			children = (
 				AA2F4D06278299ED00B3A735 /* ViewController.swift */,
+				AA2F4DA82793983200B3A735 /* MenuVC.swift */,
 				AA2F4D172782A83400B3A735 /* AddTimeVC.swift */,
 				AA2F4D192782A86400B3A735 /* HomeVC.swift */,
 				AA2F4D232782A96200B3A735 /* Authentication */,
+				AA2F4DAA2793989F00B3A735 /* HomeContainerVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 				AA2F4D07278299ED00B3A735 /* ViewController.swift in Sources */,
 				AA2F4D1E2782A8C300B3A735 /* LoginVC.swift in Sources */,
 				AA2F4D222782A93E00B3A735 /* VerifyVC.swift in Sources */,
+				AA2F4DAB2793989F00B3A735 /* HomeContainerVC.swift in Sources */,
 				AA2F4D252782A99100B3A735 /* TimeClient.swift in Sources */,
 				AA2F4D1A2782A86400B3A735 /* HomeVC.swift in Sources */,
 				AA2F4D03278299ED00B3A735 /* AppDelegate.swift in Sources */,
@@ -384,6 +391,7 @@
 				AA2F4D2D2782AA3F00B3A735 /* ApiUtils.swift in Sources */,
 				AA2F4D182782A83400B3A735 /* AddTimeVC.swift in Sources */,
 				AA2F4DA72786983500B3A735 /* CircleConstants.swift in Sources */,
+				AA2F4DA92793983200B3A735 /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

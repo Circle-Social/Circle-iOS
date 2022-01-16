@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="815.625"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home ContainerVC-->
         <scene sceneID="hO9-3O-OfE">
             <objects>
-                <viewController id="U3U-Ol-MHn" customClass="HomeViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U3U-Ol-MHn" customClass="HomeContainerVC" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ncy-Uh-x1g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

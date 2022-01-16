@@ -11,11 +11,18 @@ import Firebase
 import SideMenu
 
 
+protocol HomeViewControllerDelegate: AnyObject {
+    func menuPressed()
+}
+
+
 class HomeViewController: UIViewController {
     
     private var authUser : User? {
         return Auth.auth().currentUser
     }
+    
+    weak var delegate: HomeViewControllerDelegate?
     
     var menu: SideMenuNavigationController?
     private let menuButton: UIButton = {
@@ -37,23 +44,24 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addGradient()
+        let navFont = UIFont(name: "PingFangHK-Thin", size: 21)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: navFont!]
+        title = "Home"
         
-        let homeMsg = UITextView(frame: CGRect(x: view.center.x-50, y: 10, width: 100, height: 100))
-        homeMsg.textAlignment = .center
-        homeMsg.textColor = UIColor.black
-        homeMsg.backgroundColor = UIColor(white: 1, alpha: 0.0)
-        let text = "Home"
-        homeMsg.text = text
-        homeMsg.font = UIFont(name: "PingFangHK-Thin", size: 21)
-        view.addSubview(homeMsg)
+        let image = UIImage(named: "LogoClear")
+        let scaledImage = image?.resize(withPercentage: 0.05)
+        let menuBtn = UIButton(type: .custom)
         
-        menu = SideMenuNavigationController(rootViewController: MenuListController())
-        menu?.leftSide = true
-        menu?.setNavigationBarHidden(true, animated: false)
-        SideMenuManager.default.leftMenuNavigationController = menu
-        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
-        view.addSubview(menuButton)
-        menuButton.addTarget(self, action: #selector(menuPressed), for: .touchUpInside)
+        menuBtn.setBackgroundImage(scaledImage, for: .normal)
+        menuBtn.addTarget(self, action: #selector(menuPressed), for: .touchUpInside)
+        menuBtn.frame = CGRect(x: menuButtonX, y: menuButtonY, width: menuButtonWidth, height: menuButtonHeight)
+
+        let view = UIView(frame: CGRect(x: menuButtonX, y: menuButtonY, width: menuButtonWidth, height: menuButtonHeight))
+        view.bounds = view.bounds.offsetBy(dx: 10, dy: 3)
+        view.addSubview(menuBtn)
+        let menuButtonItem = UIBarButtonItem(customView: view)
+        
+        navigationItem.leftBarButtonItem = menuButtonItem
         
         let tc = TimeClient()
         tc.getFreeTime(uid: authUser!.uid) { result in
@@ -71,17 +79,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        menuButton.frame = CGRect(
-            x: headerButtonX,
-            y: headerButtonY,
-            width: headerButtonWidth,
-            height: headerButtonHeight
-        )
     }
     
     @objc func menuPressed() {
-        present(menu!, animated: true)
+        delegate?.menuPressed()
     }
 
     func addGradient() {
