@@ -54,6 +54,7 @@
 		AA2F4DA72786983500B3A735 /* CircleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DA62786983500B3A735 /* CircleConstants.swift */; };
 		AA2F4DA92793983200B3A735 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DA82793983200B3A735 /* MenuVC.swift */; };
 		AA2F4DAB2793989F00B3A735 /* HomeContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DAA2793989F00B3A735 /* HomeContainerVC.swift */; };
+		AA2F4DAD2793C9A900B3A735 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DAC2793C9A900B3A735 /* ViewUtils.swift */; };
 		CB3690B3CCC9F2C5AF84BE99 /* Pods_Circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B689838362F84FBB82EE35 /* Pods_Circle.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		AA2F4DA62786983500B3A735 /* CircleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleConstants.swift; sourceTree = "<group>"; };
 		AA2F4DA82793983200B3A735 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		AA2F4DAA2793989F00B3A735 /* HomeContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerVC.swift; sourceTree = "<group>"; };
+		AA2F4DAC2793C9A900B3A735 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		C1B689838362F84FBB82EE35 /* Pods_Circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9EF2B1D674C8A4FE1B5391 /* Pods-Circle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.debug.xcconfig"; path = "Target Support Files/Pods-Circle/Pods-Circle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				AA2F4D2C2782AA3F00B3A735 /* ApiUtils.swift */,
+				AA2F4DAC2793C9A900B3A735 /* ViewUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				AA2F4D182782A83400B3A735 /* AddTimeVC.swift in Sources */,
 				AA2F4DA72786983500B3A735 /* CircleConstants.swift in Sources */,
 				AA2F4DA92793983200B3A735 /* MenuVC.swift in Sources */,
+				AA2F4DAD2793C9A900B3A735 /* ViewUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

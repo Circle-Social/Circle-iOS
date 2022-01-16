@@ -44,23 +44,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addGradient()
+        
         let navFont = UIFont(name: "PingFangHK-Thin", size: 21)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: navFont!]
         title = "Home"
         
-        let image = UIImage(named: "LogoClear")
-        let scaledImage = image?.resize(withPercentage: 0.05)
-        let menuBtn = UIButton(type: .custom)
-        
-        menuBtn.setBackgroundImage(scaledImage, for: .normal)
-        menuBtn.addTarget(self, action: #selector(menuPressed), for: .touchUpInside)
-        menuBtn.frame = CGRect(x: menuButtonX, y: menuButtonY, width: menuButtonWidth, height: menuButtonHeight)
-
-        let view = UIView(frame: CGRect(x: menuButtonX, y: menuButtonY, width: menuButtonWidth, height: menuButtonHeight))
-        view.bounds = view.bounds.offsetBy(dx: 10, dy: 3)
-        view.addSubview(menuBtn)
-        let menuButtonItem = UIBarButtonItem(customView: view)
-        
+        let menuButtonItem = ViewUtils().createMenuButtonItem(#selector(self.menuPressed), controller: self)
         navigationItem.leftBarButtonItem = menuButtonItem
         
         let tc = TimeClient()
