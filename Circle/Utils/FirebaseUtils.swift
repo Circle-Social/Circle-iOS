@@ -11,12 +11,15 @@ import Firebase
 
 class FirebaseUtils: NSObject {
     
-    func logOutUser() {
+    func logOutUser() -> Bool {
         let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
         } catch let signOutError as NSError {
           print("Error: \(signOutError)")
+            return false
         }
+        
+        return true
     }
 }

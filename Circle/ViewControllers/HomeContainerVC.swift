@@ -102,7 +102,15 @@ extension HomeContainerVC: MenuViewControllerDelegate {
     }
     
     func logout() {
-        FirebaseUtils().logOutUser()
-        self.performSegue(withIdentifier: "homeLogout", sender: nil)
+        let success = FirebaseUtils().logOutUser()
+        if (success) {
+            self.performSegue(withIdentifier: "homeLogout", sender: nil)
+        } else {
+            let alertController = UIAlertController(title: "Logout Failure", message: "Please try again", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 }
