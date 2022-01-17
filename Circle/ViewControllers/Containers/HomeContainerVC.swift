@@ -90,7 +90,7 @@ extension HomeContainerVC: MenuViewControllerDelegate {
             case .home:
                 break
             case .time:
-                break
+                self.time()
             case .circles:
                 break
             case .settings:
@@ -99,6 +99,10 @@ extension HomeContainerVC: MenuViewControllerDelegate {
                 self.logout()
             }
         }
+    }
+    
+    func time() {
+        self.performSegue(withIdentifier: "home2time", sender: nil)
     }
     
     func logout() {

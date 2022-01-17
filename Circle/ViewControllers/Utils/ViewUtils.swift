@@ -26,4 +26,19 @@ class ViewUtils: NSObject {
         let menuButtonItem = UIBarButtonItem(customView: view)
         return menuButtonItem
     }
+    
+    func createAddTimeItem(_ menuSelector: Selector, controller: UIViewController) -> UIBarButtonItem? {
+        let plusIcon = UIImage(systemName: "plus.app")
+        let timeBtn = UIButton(type: .custom)
+        timeBtn.setBackgroundImage(plusIcon, for: .normal)
+        timeBtn.addTarget(controller, action: menuSelector, for: .touchUpInside)
+        timeBtn.frame = CGRect(x: timeButtonX, y: timeButtonY, width: timeButtonWidth, height: timeButtonHeight)
+        timeBtn.tintColor = UIColor.orange
+
+        let view = UIView(frame: CGRect(x: timeButtonX, y: timeButtonY, width: timeButtonWidth, height: timeButtonHeight))
+        view.bounds = view.bounds.offsetBy(dx: 10, dy: 3)
+        view.addSubview(timeBtn)
+        let timeButtonItem = UIBarButtonItem(customView: view)
+        return timeButtonItem
+    }
 }

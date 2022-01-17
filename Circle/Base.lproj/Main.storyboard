@@ -160,6 +160,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="homeLogout" id="aHW-eX-CvS"/>
+                        <segue destination="uLM-fo-sKP" kind="show" identifier="home2time" id="620-0Q-g80"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="947-rz-4ow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -185,9 +186,28 @@
             </objects>
             <point key="canvasLocation" x="948" y="1708"/>
         </scene>
+        <!--Time ContainerVC-->
+        <scene sceneID="NP2-nq-Tmo">
+            <objects>
+                <viewController id="uLM-fo-sKP" customClass="TimeContainerVC" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AHl-I0-IaK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="S5N-ZU-uyC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QKn-7W-57j"/>
+                    <connections>
+                        <segue destination="U3U-Ol-MHn" kind="show" identifier="time2home" id="Lww-52-unB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gW5-g3-ws3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4588" y="-841"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bwl-sE-eAY"/>
+        <segue reference="Lww-52-unB"/>
         <segue reference="v3q-OL-0Fd"/>
     </inferredMetricsTieBreakers>
     <resources>

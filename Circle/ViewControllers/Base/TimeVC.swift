@@ -1,8 +1,8 @@
 //
-//  HomeVC.swift
+//  TimeVC.swift
 //  Circle
 //
-//  Created by Sharvil Kekre on 1/2/22.
+//  Created by Sharvil Kekre on 1/16/22.
 //
 
 import UIKit
@@ -11,35 +11,20 @@ import Firebase
 import SideMenu
 
 
-protocol HomeViewControllerDelegate: AnyObject {
+protocol TimeViewControllerDelegate: AnyObject {
     func menuPressed()
 }
 
 
-class HomeViewController: UIViewController {
+class TimeViewController: UIViewController {
+    
+    let logger = CircleLogger()
     
     private var authUser : User? {
         return Auth.auth().currentUser
     }
     
-    weak var delegate: HomeViewControllerDelegate?
-    
-    var menu: SideMenuNavigationController?
-    private let menuButton: UIButton = {
-        var configuration = UIButton.Configuration.filled()
-        configuration.baseBackgroundColor = UIColor.white
-        configuration.buttonSize = .large
-
-        let button = UIButton(configuration: configuration, primaryAction: nil)
-        var image = UIImage(named: "LogoClear")
-        var scaledImage = image?.resize(withPercentage: 0.05)
-        
-        button.setImage(scaledImage, for: .normal)
-        button.contentVerticalAlignment = .fill
-        button.contentHorizontalAlignment = .fill
-        button.adjustsImageSizeForAccessibilityContentSizeCategory = true
-        return button
-    }()
+    weak var delegate: TimeViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +32,15 @@ class HomeViewController: UIViewController {
         
         let navFont = UIFont(name: "PingFangHK-Thin", size: 21)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: navFont!]
-        title = "Home"
+        title = "Time"
         
+        // Menu Button
         let menuButtonItem = ViewUtils().createMenuButtonItem(#selector(self.menuPressed), controller: self)
         navigationItem.leftBarButtonItem = menuButtonItem
+        
+        // Add Time Button
+        let addTimeButtonItem = ViewUtils().createAddTimeItem(#selector(self.addTimePressed), controller: self)
+        navigationItem.rightBarButtonItem = addTimeButtonItem
         
         let tc = TimeClient()
         tc.getFreeTime(uid: authUser!.uid) { result in
@@ -59,8 +49,10 @@ class HomeViewController: UIViewController {
                 print(error)
             case .success(let value):
                 for entry in value {
-                    print("Start: \(String(describing: entry!["startDate"]!))")
-                    print("End: \(String(describing: entry!["endDate"]!))")
+                    let start = "Start: \(String(describing: entry!["startDate"]!))"
+                    let end = "End: \(String(describing: entry!["endDate"]!))"
+                    self.logger.info(msg: start)
+                    self.logger.info(msg: end)
                 }
             }
         }
@@ -72,6 +64,11 @@ class HomeViewController: UIViewController {
     
     @objc func menuPressed() {
         delegate?.menuPressed()
+    }
+    
+    @objc func addTimePressed() {
+        let msg = "add time pressed"
+        self.logger.info(msg: msg)
     }
 
     func addGradient() {
