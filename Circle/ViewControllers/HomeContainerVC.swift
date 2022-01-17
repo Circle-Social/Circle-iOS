@@ -96,8 +96,13 @@ extension HomeContainerVC: MenuViewControllerDelegate {
             case .settings:
                 break
             case .logout:
-                self.performSegue(withIdentifier: "homeLogout", sender: self)
+                self.logout()
             }
         }
+    }
+    
+    func logout() {
+        FirebaseUtils().logOutUser()
+        self.performSegue(withIdentifier: "homeLogout", sender: nil)
     }
 }

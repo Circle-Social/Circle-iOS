@@ -55,6 +55,7 @@
 		AA2F4DA92793983200B3A735 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DA82793983200B3A735 /* MenuVC.swift */; };
 		AA2F4DAB2793989F00B3A735 /* HomeContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DAA2793989F00B3A735 /* HomeContainerVC.swift */; };
 		AA2F4DAD2793C9A900B3A735 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DAC2793C9A900B3A735 /* ViewUtils.swift */; };
+		AA2F4DAF279518E300B3A735 /* FirebaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4DAE279518E300B3A735 /* FirebaseUtils.swift */; };
 		CB3690B3CCC9F2C5AF84BE99 /* Pods_Circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B689838362F84FBB82EE35 /* Pods_Circle.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		AA2F4DA82793983200B3A735 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		AA2F4DAA2793989F00B3A735 /* HomeContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerVC.swift; sourceTree = "<group>"; };
 		AA2F4DAC2793C9A900B3A735 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		AA2F4DAE279518E300B3A735 /* FirebaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtils.swift; sourceTree = "<group>"; };
 		C1B689838362F84FBB82EE35 /* Pods_Circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9EF2B1D674C8A4FE1B5391 /* Pods-Circle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.debug.xcconfig"; path = "Target Support Files/Pods-Circle/Pods-Circle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +220,7 @@
 			children = (
 				AA2F4D2C2782AA3F00B3A735 /* ApiUtils.swift */,
 				AA2F4DAC2793C9A900B3A735 /* ViewUtils.swift */,
+				AA2F4DAE279518E300B3A735 /* FirebaseUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2F4DAF279518E300B3A735 /* FirebaseUtils.swift in Sources */,
 				AA2F4D202782A90F00B3A735 /* SignUpVC.swift in Sources */,
 				AA2F4D1C2782A89900B3A735 /* ForgotPassVC.swift in Sources */,
 				AA2F4D07278299ED00B3A735 /* ViewController.swift in Sources */,
