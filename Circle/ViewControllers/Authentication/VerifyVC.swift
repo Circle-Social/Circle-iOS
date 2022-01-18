@@ -48,7 +48,7 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addGradient()
+        ViewUtils().addGradientOne(controller: self)
         view.addSubview(logoView)
         logoView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
         logoView.center.x = view.center.x
@@ -114,17 +114,5 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
         else {
             // Either the user is not available, or the user is already verified.
         }
-    }
-
-    func addGradient() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [
-            UIColor.white.cgColor,
-            UIColor.yellow.cgColor,
-            UIColor.orange.cgColor,
-            UIColor.red.cgColor
-        ]
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }

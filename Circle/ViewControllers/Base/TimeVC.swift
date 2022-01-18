@@ -13,6 +13,7 @@ import SideMenu
 
 protocol TimeViewControllerDelegate: AnyObject {
     func menuPressed()
+    func addTimePressed()
 }
 
 
@@ -67,8 +68,7 @@ class TimeViewController: UIViewController {
     }
     
     @objc func addTimePressed() {
-        let msg = "add time pressed"
-        self.logger.info(msg: msg)
+        delegate?.addTimePressed()
     }
 
     func addGradient() {

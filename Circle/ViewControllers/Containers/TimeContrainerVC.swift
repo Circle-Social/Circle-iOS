@@ -26,12 +26,12 @@ class TimeContainerVC: UIViewController {
     }
     
     private func addChildVCs() {
+        
         // Menu
         menuVC.delegate = self
         addChild(menuVC)
         view.addSubview(menuVC.view)
         menuVC.didMove(toParent: self)
-        view.backgroundColor = darkOrange
         
         // Home
         timeVC.delegate = self
@@ -45,6 +45,10 @@ class TimeContainerVC: UIViewController {
 
 
 extension TimeContainerVC: TimeViewControllerDelegate {
+    
+    func addTimePressed() {
+        self.performSegue(withIdentifier: "addTime", sender: self)
+    }
     
     func menuPressed() {
         toggleMenu(completion: nil)

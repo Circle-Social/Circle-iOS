@@ -41,4 +41,16 @@ class ViewUtils: NSObject {
         let timeButtonItem = UIBarButtonItem(customView: view)
         return timeButtonItem
     }
+    
+    func addGradientOne(controller: UIViewController) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = controller.view.bounds
+        gradientLayer.colors = [
+            UIColor.white.cgColor,
+            UIColor.yellow.cgColor,
+            UIColor.orange.cgColor,
+            UIColor.red.cgColor
+        ]
+        controller.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
 }

@@ -199,14 +199,34 @@
                     <navigationItem key="navigationItem" id="QKn-7W-57j"/>
                     <connections>
                         <segue destination="U3U-Ol-MHn" kind="show" identifier="time2home" id="Lww-52-unB"/>
+                        <segue destination="HlC-h4-9ID" kind="showDetail" identifier="addTime" id="eXm-je-885"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gW5-g3-ws3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4588" y="-841"/>
         </scene>
+        <!--Add TimeVC-->
+        <scene sceneID="XbF-7P-gNp">
+            <objects>
+                <viewController id="HlC-h4-9ID" customClass="AddTimeVC" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HjF-DV-Dci">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Hel-kc-d2G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="uLM-fo-sKP" kind="showDetail" identifier="returnTime" id="8l0-b6-CNO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LwH-S4-sOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6393" y="-841"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="8l0-b6-CNO"/>
         <segue reference="Lww-52-unB"/>
         <segue reference="v3q-OL-0Fd"/>
     </inferredMetricsTieBreakers>
