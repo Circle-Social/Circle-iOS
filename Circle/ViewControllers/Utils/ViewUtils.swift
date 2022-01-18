@@ -11,6 +11,28 @@ import UIKit
 
 class ViewUtils: NSObject {
     
+    func createTitle(title: String, controller: UIViewController) -> UITextView {
+        let titleMsg = UITextView(frame: CGRect(x: controller.view.center.x-100, y: 0, width: 200, height: 50))
+        titleMsg.textAlignment = .center
+        titleMsg.textColor = UIColor.black
+        titleMsg.backgroundColor = UIColor(white: 1, alpha: 0.0)
+        let text = title
+        titleMsg.text = text
+        titleMsg.font = UIFont(name: "PingFangHK-Semibold", size: 21)
+        return titleMsg
+    }
+    
+    func createTitleSymbol(symbolName: String, controller: UIViewController) -> UIImageView {
+        let titleView = UIImageView()
+        titleView.contentMode = .scaleAspectFill
+        titleView.image = UIImage(systemName: symbolName)
+        titleView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        titleView.center.x = controller.view.center.x
+        titleView.center.y = controller.view.frame.minY + 40
+        titleView.tintColor = .black
+        return titleView
+    }
+    
     func createMenuButtonItem(_ menuSelector: Selector, controller: UIViewController) -> UIBarButtonItem? {
         let image = UIImage(named: "LogoClear")
         let scaledImage = image?.resize(withPercentage: 0.05)

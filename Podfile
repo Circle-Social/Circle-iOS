@@ -6,5 +6,6 @@ target 'Circle' do
   use_frameworks!
 
 pod 'SideMenu'
+pod 'FSCalendar'
 
 end
